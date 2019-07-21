@@ -3,13 +3,13 @@
  * 进入可视区域, 从dataset 中拿到对应的imgsrc 替换原有的src
  * Simple:
  * const lazyimg = Array.from(document.querySelectorAll('img[data-imgsrc]'))
- * const ob = getgetObServer()
+ * const ob = getObServer()
  * lazyimg.forEach( img => {
  *   ob.observe(img)
  * })
  */
 function getObServer() {
-  const obServer = new IntersectionObserver( ioes => {
+  return new IntersectionObserver( ioes => {
     ioes.forEach( ioe => {
       const elem = ioe.target
       const interRatio = ioe.intersectionRatio
@@ -19,5 +19,4 @@ function getObServer() {
       }
     })
   })
-  return obServer
 }

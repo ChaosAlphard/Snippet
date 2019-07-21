@@ -3,6 +3,7 @@
  * 进入可视区域, 从dataset 中拿到对应的imgsrc 替换原有的src
  * Simple:
  * const lazyimg = Array.from(document.querySelectorAll('img[data-imgsrc]'))
+ * const ob = getgetObServer()
  * lazyimg.forEach( img => {
  *   ob.observe(img)
  * })

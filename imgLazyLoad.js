@@ -1,6 +1,6 @@
 /**
  * 使用IntersectionObserver 判断图片是否进入可视区域
- * Simple:
+ * Sample:
  * const lazyimg = Array.from(document.querySelectorAll('img[data-imgsrc]'))
  * const ob = getObServer()
  * lazyimg.forEach( img => {

@@ -42,34 +42,14 @@
  */
 
 var numJewelsInStones = function(J, S) {
-    if(S.length>50 || J.length>50) {
-        throw new Error('length is too long! max length is 50')
-    }
-
-    if(checkRepet(J)) {
-        throw new Error('jewels can not repet!')
-    }
-
-    let count = 0
+    let count = 0;
     for(let item of S) {
         if(J.indexOf(item) !== -1) {
-            count++
+            count++;
         }
     }
 
-    return count
-};
-
-function checkRepet(str) {
-    // const arr = str.split('')
-    // for(const [i,v] of arr.entries()) {
-    //     if(str.indexOf(v,i+1) != -1){
-    //         return true
-    //     }
-    // }
-    // return false
-    const arr = str.split('')
-    return arr.length !== [...new Set(arr)].length
+    return count;
 }
 
 // Done.
